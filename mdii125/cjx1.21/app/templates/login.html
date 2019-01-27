@@ -1,0 +1,18 @@
+{% extends 'loginbase.html' %}
+
+
+{% block username %}
+{{ form.username }}
+{% endblock %}
+
+{% block password %}
+{{ form.password }}
+{% endblock %}
+
+{% block submit %}
+{{ form.login }}
+{% endblock %}
+
+{% block remember %}
+{{ form.remember_me }}
+{% endblock %}

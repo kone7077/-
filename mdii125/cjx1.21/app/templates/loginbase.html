@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
+    <link rel="shortcut icon" href="/static/images/0017029545783020_b.ico" >
+    <title>登录 | 吃货吧</title>
+    <!--[if lt IE 9]>
+        <script src="//s0.meituan.net/bs/jsm/?f&#x3D;fe-sso-fs:build/page/vendor/html5shiv.min.js"></script>
+    <![endif]-->
+
+    <link rel="stylesheet" type="text/css" href="../static/css文件/login.min.css">
+    <script src="../static/js/login.min.js">
+    
+    
+    </script>
+    <link rel="stylesheet" type="text/css" href="../static/css文件/login.css">
+    
+</head>
+
+<body class="pg-unitive-login theme--www">
+{% block body %}
+    <div class="warning">
+        {% for message in get_flashed_messages() %}
+            <div class="alert alert-warning alert-dismissible" role="alert">
+                <strong>Warning!{{ message }}</strong>
+
+            </div>
+        {% endfor %}
+    </div>
+
+	<header class="header cf">
+    <a  href="">吃货吧</a>
+</header>
+
+
+    <div class="site-body-wrapper">
+    <div class="site-body cf">
+        <div class="promotion-banner">
+	    <img src="../static/images/login.jpeg" width="480" height="370" alt="吃货吧"/>
+</div>
+
+        <div class="login-section" data-params="{&quot;service&quot;:&quot;www&quot;,&quot;isDialog&quot;:false }">
+            <!-- action表单提交路径 -->
+    <form id="J-normal-form" action="" method="POST" class="form form--stack" >
+        <div class="validate-info" style="visibility:hidden">账号登录</div>
+
+        <span class="login-type" data-mtevent="login.mobile.switch">
+            用户名：
+        </span>
+
+        <div class="form-field form-field--icon">
+            {% block username %}
+            <i class="icon icon-user"></i>
+
+            <input type="text" id="login-email" class="f-text" name="email" placeholder="手机号/用户名/邮箱" value="" />
+            {% endblock %}
+        </div>
+        <label>密　码：</label><br>
+        <div class="form-field form-field--icon">
+            {% block password %}
+            <i class="icon icon-password"></i>
+
+            <input type="password" id="login-password" class="f-text" name="password" placeholder="密码" />
+            {% endblock %}
+        </div>
+        
+        <div class="form-field form-field--auto-login cf">
+
+            {% block remember %}
+            ..
+            {% endblock %}
+
+                    <a tabindex="-1" href="" target="_top" class="forget-password">忘记密码？</a>
+
+        </div>
+        <div class="form-field form-field--ops">
+            <input type="hidden" name="origin" value="account-login" />
+            <input type="hidden" name="fingerprint" class="J-fingerprint" value="" />
+            <input type="hidden" name="csrf" value="2sBWy1HQ-Bj19yjQLsJ3LkxW0jvNYs0__YPk" />
+            {% block submit %}
+            <input data-mtevent="login.normal.submit" type="submit" class="btn" name="submit" value="登录" />
+            {% endblock %}
+        </div>
+        {% block register %}
+                <p class="signup-guide">还没有账号？<a href="{{ url_for('main.Register') }}" target="_top">免费注册</a></p>
+        {% endblock %}
+    </form>
+
+        <div class="oauth-wrapper">
+            <h3 class="title-wrapper"><span class="title">用合作网站账号登录</span></h3>
+            <div class="oauth cf">
+                <a class="oauth__link oauth__link--qq" href="" data-mtevent='{"la":"oauth/qq"}'  target="_blank"></a>
+                <a class="oauth__link oauth__link--weibo" href="" data-mtevent='{"la":"oauth/sina"}' target="_blank"></a>
+            </div>
+        </div>
+</div>
+
+    </div>
+    </div>
+
+	<footer class="footer">
+    <div class="site-info-nav cf">
+        <ul>
+            <li class="first"><a rel="nofollow" href="">关于我们</a></li>
+            <li><a rel="nofollow" href="">加入我们</a></li>
+            <li><a rel="nofollow" href="">商家入驻</a></li>
+            <li><a rel="nofollow" href="">帮助中心</a></li>
+            <li class="last"><a href="">手机版</a></li>
+        </ul>
+    </div>
+    <div class="copyright">
+        <p>
+            &copy;<span>2019</span>
+            <a href="">团购</a>
+            meituan.com
+            <a href="http://food.39.net/">39健康网</a>
+			<a href="http://www.39830i.com/Register/?a=63241">天天营养网</a>
+			<a href="http://www.canyin.com/">中国餐饮网</a>
+			<a href="http://835.dopa.com">餐饮世界网</a>
+			<a href="http://www.tesecai.cn/">特色菜网</a>
+			<a href="http://www.westfood.com.cn/">中国西餐网</a>
+			<a href="http://www.chinavegan.com/">中华素食网</a>
+			<a href="http://www.kclm.org/">中国快餐联盟网</a>
+			<a href="http://www.souchu.com/">搜厨网</a>
+			<a href="http://www.cantingsheji.com/">餐厅设计网</a>
+			<a href="https://www.meishichina.com/">美食中国</a>
+        </p>
+        <br>
+        <p class='linkweb'>
+                电话:&nbsp;15228946972&nbsp;售前QQ:&nbsp;562908512&nbsp;1263576715&nbsp;地址：&nbsp;深圳市宝安区龙华民治大道0000号 &nbsp;邮编：&nbsp;000000 &nbsp;（商务合作）
+        </p>
+    </div>
+</footer>
+
+	<script>window.onunload = function(){};</script>
+
+<span id="csrf" style="display:none">2sBWy1HQ-Bj19yjQLsJ3LkxW0jvNYs0__YPk</span>
+
+<script>
+  var Rohr_Opt = {
+    geo: false
+  }
+</script>
+<script src="//s0.meituan.net/mxx/y/default.js"></script>
+{% endblock %}
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<select>
+		<option value="1">1</option>
+		<option value="2">2</option>
+		<option value="3">3</option>
+		<option value="4">4</option>
+		<option value="5">5</option>
+		<option value="6">6</option>
+	</select>
+	<button>提交</button>
+	<script type="text/javascript" src="jquery-1.11.3.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			$('button').click(function(){
+				var selCount=$('select').val();
+				console.log(selCount);
+				console.log(typeof selCount);
+			})
+
+		})
+	</script>
+
+</body>
+</html>

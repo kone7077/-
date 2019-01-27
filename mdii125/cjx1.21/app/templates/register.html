@@ -1,0 +1,33 @@
+{% extends 'registerbase.html' %}
+
+{% block token %}
+{{ form.csrf_token }}
+{% endblock %}
+
+{% block phone %}
+{{ form.phone }}
+{% endblock %}
+
+{% block username %}
+{{ form.username }}
+{% endblock %}
+
+{% block name %}
+{{ form.name }}
+{% endblock %}
+
+{% block email %}
+{{ form.email }}
+{% endblock %}
+
+{% block passwd %}
+{{ form.password_hash }}
+{% endblock %}
+
+{% block passwd2 %}
+{{ form.password_again }}
+{% endblock %}
+
+{% block submit %}
+{{ form.register }}
+{% endblock %}

@@ -1,0 +1,102 @@
+.cart-list-box{
+    background:#FFFFFF;
+    font-size:15px;
+    border-bottom:1px #E3E3E3 solid;
+    display:flex;
+    flex-direction:row;
+}
+.cart-list-box1{
+    width:50%;
+    display:flex;
+    flex-direction:column;
+}
+.list-info{
+    width:100%;
+    padding:5px  ;
+    display:flex;
+    flex-direction:column;
+}
+.list-info2{
+    width:50%;
+    padding:10px ;
+    display:flex;
+    flex-direction:column;
+}
+.div{
+    width: 400px;
+    height: 400px;
+    position:absolute;
+    
+    top:150px;
+    left:400px;
+}
+.div_1{
+    position:relative;
+    top:200px;
+    left: 10%;
+}
+
+
+.linkweb{
+	width:898px;
+	height:35px;
+	color:#474747;
+	text-align: center;
+    line-height: 35px;
+    
+}
+.ass{
+    width: 400px;
+    height: 300px;
+    position:absolute;
+    top:850px;
+    left: 200px;
+     
+}
+.order_form{
+    width: 400px;
+    height: 300px;
+    position:absolute;
+    top:700px;
+    left: 200px;
+    
+}
+.linkweb>a{
+	display: inline-block;
+	margin-right:19px;
+}
+.linkweb>a:hover{
+	text-decoration:underline;
+	color:#FF0000;
+}   
+.table-bordered{
+    background-image:url(table.jpg) ;
+    background-color: rgba(245, 245, 220, 0.514);
+    width: 650px;
+    
+    background-attachment:fixed;
+}    
+table th{
+    height: 30px;
+    color: rgba(3, 26, 44, 0.514);
+    font-size: 20px;
+}
+table td{
+    height: 30px;
+    color: rgba(3, 26, 44, 0.514);
+    font-size: 15px;
+}
+.btn2{
+position:relative;
+left:200px;
+}
+
+
+
+
+    
+  
+    
+    
+    
+    

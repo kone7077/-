@@ -1,0 +1,130 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
+    <link rel="shortcut icon" href="/static/images/0017029545783020_b.ico" >
+    
+
+    <title>注册 | 吃货吧</title>
+    <!--[if lt IE 9]>
+        <script src="//s0.meituan.net/bs/jsm/?f&#x3D;fe-sso-fs:build/page/vendor/html5shiv.min.js"></script>
+    <![endif]-->
+
+    <link rel="stylesheet" type="text/css" href="../static/css文件/register.min.css">
+
+
+    <script src="../static/js/register.min.js"></script>
+    <script src="../static/js/register.js"></script>
+    
+    
+</head>
+
+<body class="pg-unitive-signup theme--www">
+
+	<header class="header--mini">
+    <div class="wrapper cf">
+        <a class="site-logo" href="{{ url_for('main.index_views') }}">吃货吧</a>
+        <div class="login-block">
+            <span class="tip">已有账号？</span>
+            <a class="btn btn-small login" href="{{ url_for('main.login') }}">登录</a>
+        </div>
+    </div>
+</header>
+
+
+
+    <div class="content">
+        <div class="J-unitive-signup-form">
+
+    <div class="sheet" style="display:block">
+    <form action="" method="POST">
+        {% block token %}
+        ..
+        {% endblock %}
+            <div class="form-field form-field--mobile">
+                <label>手机号</label>
+                {% block phone %}
+                    <input type="text" name="phone" class="f-text J-mobile"/>
+                {% endblock %}
+                    <span class="J-unitive-tip unitive-tip">注册成功后，吃货吧通用</span>
+            </div>
+            <div class="form-field form-field--pwd2">
+                    <label>用户名</label>
+                {% block username %}
+                    <input type="text" name="username" class="f-text J-mobile"/>
+                {% endblock %}
+
+            </div>
+            <div class="form-field form-field--pwd2">
+                    <label>姓名</label>
+                {% block name %}
+                    <input type="text" name="name" class="f-text J-mobile"/>
+                {% endblock %}
+
+            </div>
+            <div class="form-field form-field--pwd2">
+                    <label>邮箱</label>
+                {% block email %}
+                    <input type="text" name="email" class="f-text J-mobile"/>
+                {% endblock %}
+            </div>
+            <div class="form-field form-field--pwd">
+                <label>创建密码</label>
+                {% block passwd %}
+                    <input type="password" name="password" class="f-text J-pwd"/>
+                {% endblock %}
+                    <div id="d1"></div>
+
+            </div>
+
+            <div class="form-field form-field--pwd2">
+                <label>确认密码</label>
+                {% block passwd2 %}
+                    <input type="password" name="password2" class="f-text J-pwd2"/>
+                {% endblock %}
+
+            </div>
+            
+        <div class="form-field">
+            {% block submit %}
+            <input data-mtevent="signup.submit" type="submit" name="commit" class="btn" value="同意并注册" />
+            {% endblock %}
+            <a href="" target="_blank"></a>
+        </div>
+    </form>
+</div>
+
+</div>
+
+
+        <div class="term">
+            <a class="f1" href="" target="_blank">《吃货吧用户协议》</a>
+        </div>
+    </div>
+
+	<footer class="footer--mini">
+    <p class="copyright">
+            电话:&nbsp;15228946972&nbsp;售前QQ:&nbsp;562908512&nbsp;1263576715&nbsp;地址：&nbsp;深圳市宝安区龙华民治大道0000号 &nbsp;邮编：&nbsp;000000 &nbsp;（商务合作）
+    </p>
+</footer>
+
+	<script>window.onunload = function(){};</script>
+
+<span id="csrf" style="display:none">El83USzg-OeK7NHdh2P9Euzdwe4UsSnmZGUg</span>
+
+
+
+
+<script>
+  var Rohr_Opt = {
+    geo: false
+  }
+</script>
+<!--<script src="./js/default.min.js"></script>-->
+
+</body>
+</html>
