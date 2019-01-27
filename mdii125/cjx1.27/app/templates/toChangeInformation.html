@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>网上快餐厅--会员中心--信息修改</title>
+<link rel="stylesheet" type="text/css" href="../static/css文件/toChangeInformation.css">
+<link rel="stylesheet" type="text/css" href="../old/init.css">
+<link rel="shortcut icon" href="/static/images/0017029545783020_b.ico" >
+<script type="text/javascript" src="../static/old/jquery-1.11.3.js"></script>
+<script type="text/javascript" src='../static/old/index.js'></script>
+</head>
+<body>
+	<div id='contain' style="width:900px;background:#FFFFFF;margin:0 auto; padding:0px;">
+		<div id='top'>
+			<div class='menutop'>
+				{% if user %}
+					<a href="">订餐指南</a>|
+					<a href="">我的订单</a>|
+					<a href="">我的积分</a>|
+					<a href="/query">{{user.username}}(会员中心)</a>|
+					<a href="/logout">退出</a>|
+
+				{% else %}
+					<a href="">订餐指南</a>|
+					<a href="{{ url_for('main.Register') }}">会员注册</a>|
+					<!--<a href="{{ url_for('main.Register') }}">会员注册</a>|-->
+					<a href="{{ url_for('main.login') }}">会员登录</a>|
+					<!--<a href="/login">会员登录</a>|-->
+					<a href="/query">会员中心</a>|
+					<a href="">我的订单</a>|
+					<a href="">我的积分</a>|
+				{% endif %}
+			</div>	
+			<div class='logo'>
+			<img src="../static/images/logo.jpg">
+			</div>
+			<div id="butt_seven">
+				<!-- 首页 -->
+				<a href='/' class='sy'></a>
+				<!-- 订单查询 -->
+				<a href='/orderquery' class='cx'></a>
+				<!-- 在线充值 -->
+				<a href='' class='cz'></a>
+				<!-- 积分换赠 -->
+				<a href='' class='jf'></a>
+				<!-- 每周菜谱 -->
+				<a href='' class='cp'></a>
+				<!-- 饮食文化 -->
+				<a href='' class='wh'></a>
+				<!-- 顾客留言 -->
+				<a href='' class='ly'></a>
+			</div>
+		</div>
+		<div style="clear: both;"></div>
+
+		<div id="main">
+			<!-- 左侧小导航  -->
+			<div class="leftnav">
+				<ul type="none">
+					<li><a href="{{url_for('main.query_views')}}">会员信息</a></li>
+					<li><a href="">信息修改</a></li>
+				</ul>
+			</div>
+
+			<!-- 信息显示主窗口 -->
+			<div class="mainwindows">
+					<!-- 用户头像的div -->
+					<div class="position_user_image">
+						<img src="../static/images/userimg/example.jpg" class="userimg">
+					</div>
+					
+					<div class="userinfo">
+						<form action="" method="post">
+							<p>原用户名：{{user.username}}</p>
+
+							<p>会员姓名：
+								<input  type="text" name="name" value="{{user.name}}">
+							</p>
+
+							<p>联系方式：
+								<input  type="text" name="phone" placeholder="请输入新的联系方式" value="{{user.phone}}">
+							</p>
+
+							<p>原始密码：
+								<input  type="password" name="ouserpwd" placeholder="请输入原始密码">
+							</p>
+
+							<p>新的密码：
+								<input  type="password" name="nuserpwd" placeholder="请输入新的密码">
+							</p>
+
+							<p>会员邮箱：
+								<input  type="email" name="email" placeholder="请输入新的邮箱" value="{{user.email}}">
+							</p>
+
+							<p>
+								<!--<input type="submit" value="提交" name="" style="height: 30px;width: 80px;line-height: 30px;">-->
+								<!--<input type="reset" name="" style="height: 30px;width: 80px ;margin-left:50px;ine-height: 30px;">-->
+								<input type="submit" value="提交" name="">
+								<input type="reset" name="" style="margin-left: 100px;">
+							</p>
+						</form>
+					</div>
+			</div>
+		</div>
+		<div style="clear: both;"></div>
+
+		<!-- 网站的尾部 -->
+		<div id="bottommenu">
+			<p>
+				电话:&nbsp;15228946972&nbsp;售前QQ:&nbsp;562908512&nbsp;1263576715&nbsp;地址：&nbsp;深圳市宝安区龙华民治大道0000号 &nbsp;邮编：&nbsp;000000 &nbsp;
+			</p>
+			
+			<p>
+				网上快餐店 Copyright(C)2018-2019
+			</p>
+		</div>
+		
+	</div>
+</body>
+</html>

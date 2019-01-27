@@ -1,0 +1,164 @@
+	/*头部部分*/
+#top{
+	position: relative;
+	box-sizing:border-box;
+	width:900px;height:142px;
+	border-bottom:4px solid #E76E13;
+}
+
+.menutop{
+	float:right;
+	background-color: #FFFDEA;
+	margin:0px;
+	border: 1px solid #ED6C06;
+	border-radius: 5px;
+}
+
+.menutop>a{
+	text-decoration: none;
+	margin: 0 5px;
+	color: #555;
+	font: 12px/25px 'Microsoft YaHei','SimSun',Arial,Sans-Serif;
+}
+
+.menutop>a:hover{
+	color:#FF7300;
+}
+
+.logo{
+	float:left;
+	width:219px;
+	margin-top:2px;
+}
+
+#title_img{
+	position:absolute;
+	top: 18px;
+	left: 237px;
+}
+
+#butt_seven{
+	padding: 0px;
+	position: relative;
+	left: 217px;
+	top:96px;
+	height: 42px;
+	width:656px;
+}
+#butt_seven>a{
+	margin-left:0px;
+	margin-right:6px;
+	position: absolute;
+	width:89px;
+	height: 40px;
+	box-sizing: border-box;
+}
+.sy{left:1px;
+		top:2px;
+		background:url(../../static/images/top导航栏图标/首页2.png) no-repeat;}
+		.sy:visited{background:url(../../static/images/导航栏图标-三角/首页.png) no-repeat;}
+		.sy:hover{background:url(../../static/images/导航栏图标-三角/首页.png) no-repeat;}
+
+.cx{left:96px;
+		top:2px;
+		background:url(../../static/images/top导航栏图标/查询2.png) no-repeat;}
+		.cx:hover{background:url(../../static/images/导航栏图标-三角/订单查询.png) no-repeat;}
+
+.cz{left:190px;
+		top:2px;
+		background:url(../../static/images/top导航栏图标/充值2.png) no-repeat;}
+		.cz:hover{background:url(../../static/images/导航栏图标-三角/在线充值.png) no-repeat;}
+
+.jf{left:284px;
+		top:2px;
+		background:url(../../static/images/top导航栏图标/积分2.png) no-repeat;}
+		.jf:hover{background:url(../../static/images/导航栏图标-三角/积分换赠.png) no-repeat;}
+
+.cp{left:378px;
+		top:2px;
+		background:url(../../static/images/top导航栏图标/菜谱2.png) no-repeat;}
+		.cp:hover{background:url(../../static/images/导航栏图标-三角/每周菜谱.png) no-repeat;}
+
+.wh{left:472px;
+		top:2px;
+		background:url(../../static/images/top导航栏图标/文化2.png) no-repeat;}
+		.wh:hover{background:url(../../static/images/导航栏图标-三角/饮食文化.png) no-repeat;}
+
+.ly{left:566px;
+		top:2px;
+		background:url(../../static/images/top导航栏图标/留言2.png) no-repeat;}
+		.ly:hover{background:url(../../static/images/导航栏图标-三角/顾客留言.png) no-repeat;}
+
+/*网页主体部分*/
+#content{
+    width: 900px;
+    height: 371px;
+}
+#imgContent{
+    width:751px;
+    height:352px;
+    margin: 15px auto;
+    background: url(../../static/images/2019-01-19_151159.png);
+    position: relative;
+}
+#imgContent>form{
+    position: absolute;
+    top:87px;
+    left:212px;
+}
+#imgContent>form>.tongyi{
+    height: 35px;
+    line-height: 35px;
+    padding-top: 15px;
+
+}
+#imgContent>form input[type='text']{
+    border: 1px #ddd solid;
+    height: 20px;
+    line-height: 20px;
+    padding: 0px 3px;
+    color: #555;
+    background: #f7f7f7;
+}
+#tijiao{
+    display:block;
+    width:84px;
+    height:41px;
+    background: url(../../static/images/2019-01-19_152728.png);
+    margin-left: 36px;
+}
+
+
+/**网页尾部**/
+#liuchengImg{
+	margin:15px 0 0 0;
+	width:648px;
+	height: 146px;
+	background:url(../../static/images/1254038036.jpg);
+}
+#bottommenu{
+	width:898px;
+	height:40px;
+	background:url(../../static/images/2019-01-08_195918.png);
+	color: #474747;
+	text-align: center;
+	line-height: 40px;
+}
+#bottommenu>a:hover{
+	color: #FED400;
+}
+.linkweb{
+	width:898px;
+	height:35px;
+	color:#474747;
+	text-align: center;
+	line-height: 35px;
+}
+.linkweb>a{
+	display: inline-block;
+	margin-right:19px;
+}
+.linkweb>a:hover{
+	text-decoration:underline;
+	color:#FF0000;
+}

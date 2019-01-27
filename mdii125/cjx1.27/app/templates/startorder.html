@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>网上快餐厅</title>
+<link rel="shortcut icon" href="/static/images/0017029545783020_b.ico" >
+<link rel="stylesheet" type="text/css" href="/static/css文件/startorder.css">
+<link rel="stylesheet" type="text/css" href="/static/css文件/init.css">
+<script type="text/javascript" src="/static/js/jquery-1.11.3.js"></script>
+<!--<script type="text/javascript" src='/static/js/startorder.js'></script>-->
+</head>
+<body>
+	<div id='contain' style="width:900px;background:#FFFFFF;margin:0 auto; padding:0px;">
+		<div id='top'>
+			<div class='menutop'>
+				{% if user %}
+					<a href="">订餐指南</a>|
+					<a href="">我的订单</a>|
+					<a href="">我的积分</a>|
+					<!--<a href="{{ url_for('main.Register') }}">会员注册</a>|-->
+					<!--<a href="{{ url_for('main.login') }}">会员登录</a>|-->
+					<a href="/query">{{user.username}}(会员中心)</a>|
+					<a href="/logout">退出</a>|
+
+				{% else %}
+					<a href="">订餐指南</a>|
+					<a href="{{ url_for('main.Register') }}">会员注册</a>|
+					<!--<a href="{{ url_for('main.Register') }}">会员注册</a>|-->
+					<a href="{{ url_for('main.login') }}">会员登录</a>|
+					<!--<a href="/login">会员登录</a>|-->
+					<a href="/query">会员中心</a>|
+					<a href="">我的订单</a>|
+					<a href="">我的积分</a>|
+				{% endif %}
+			</div>
+			<div class='logo'>
+			<img src="/static/images/logo.jpg">
+			</div>
+			<img src="/static/images/微信图片_20190126131255.png" id="title_img">
+			<div id="butt_seven">
+				<!-- 首页 -->
+				<a href='/' class='sy'></a>
+				<!-- 订单查询 -->
+				<a href='/orderquery' class='cx'></a>
+				<!-- 在线充值 -->
+				<a href='' class='cz'></a>
+				<!-- 积分换赠 -->
+				<a href='' class='jf'></a>
+				<!-- 每周菜谱 -->
+				<a href='' class='cp'></a>
+				<!-- 饮食文化 -->
+				<a href='' class='wh'></a>
+				<!-- 顾客留言 -->
+				<a href='' class='ly'></a>
+			</div>
+		</div>
+
+		<div id='content'>
+			<div id='pdv_01_04'>
+				<div id='pdv_03' class='pdv_class'>
+					<div class='dingcanche' style="border-bottom: 1px dashed #D50110; overflow: hidden;">
+						<img class='image01' src="/static/images/2019-01-23_205630.png">
+						<p class='diancanche_top_left'>网站公告</p>
+					</div>
+					<ul id="Ggao">
+						<li>
+							<img src="/static/images/2019-01-24_203346.png">
+							<a href="">金秋来临，菜品赠品大升级</a>
+						</li>
+						<li>
+							<img src="/static/images/2019-01-24_203346.png">
+							<a href="">积分换电影票，奖品大变样</a>
+						</li>
+						<li>
+							<img src="/static/images/2019-01-24_203346.png">
+							<a href="">精品盖浇饭上市喽</a>
+						</li>
+						<li>
+							<img src="/static/images/2019-01-24_203346.png">
+							<a href="">10月团体订餐优惠活动开始</a>
+						</li>
+						<li>
+							<img src="/static/images/2019-01-24_203346.png">
+							<a href="">节日放假通知</a>
+						</li>
+
+					</ul>
+				</div>
+				<div id='pdv_04' class='pdv_class'>
+					<div class='dingcanche' style="border-bottom: 1px dashed #D50110; overflow: hidden;">
+						<img class='image01' src="/static/images/2019-01-23_211500.png">
+						<p class='diancanche_top_left'>本周菜单</p>
+					</div>
+					<div id="diancanweekmenu">
+						<table width="100%" height="30" cellpadding="3" style="background:#fef0d3;">
+							<tr>
+								<td rowspan="2" align="center" style="vertical-align:middle;">
+								<span style="background:#f99d20;color:#ffffff;">01</span></td>
+								<td>一</td>
+								<td>二</td>
+								<td>三</td>
+								<td>四</td>
+								<td>五</td>
+								<td>六</td>
+								<td>日</td>
+							</tr>
+							<tr>
+								<td><a href="">25</a></td>
+								<td><a href="">26</a></td>
+								<td><a href="">27</a></td>
+								<td><a href="">28</a></td>
+								<td><a href="">29</a></td>
+								<td><a href="">30</a></td>
+								<td><a href="">31</a></td>
+							</tr>
+						</table>
+
+					</div>
+				</div>
+			</div>
+			<div id='pdv_05' class='pdv_class'>
+				<p id="dingdantop_01">
+						您现在的位置:网上订餐店&nbsp;
+						<a>网上订餐</a>>
+						<a>订单处理</a>
+				</p>
+				<div class="dingdan_div" id="dingdan_div01">
+					<table>
+						<thead bgcolor="red;">
+							<td>餐品类型</td>
+							<td>名称</td>
+							<td>单价(元)</td>
+							<td>数量</td>
+							<td>小计(元)</td>
+							<td>取消</td>
+						</thead>
+						<tr>
+							<td>自选餐品</td>
+							<td>...</td>
+							<td>...</td>
+							<td><input type="text"></td>
+							<td>...</td>
+							<td><img src="/static/images/2019-01-06_212719.png"></td>
+						</tr>
+						<tr>
+							<td>自选餐品</td>
+							<td>醋椒牛柳</td>
+							<td>8.00</td>
+							<td><input type="text"></td>
+							<td>...</td>
+							<td><img src="/static/images/2019-01-06_212719.png"></td>
+						</tr>
+					</table>
+				</div>
+
+				<div class="dingdan_div" id="dingdan_div02">
+
+				</div>
+
+			</div>
+
+		</div>
+
+
+
+
+
+
+		<!-- 网站的尾部 -->
+
+		<div id='bottommenu'>
+			<a href="">关于我们</a>&nbsp;|
+			<a href="">订餐指南</a>&nbsp;|
+			<a href="">配送说明</a>&nbsp;|
+			<a href="">联系方式</a>&nbsp;|
+			<a href="">投诉建议</a>&nbsp;|
+			<a href="">诚聘英才</a>
+		</div>
+		<p class='linkweb'>
+			<a href="http://food.39.net/">39健康网</a>
+			<a href="http://www.39830i.com/Register/?a=63241">天天营养网</a>
+			<a href="http://www.canyin.com/">中国餐饮网</a>
+			<a href="http://835.dopa.com">餐饮世界网</a>
+			<a href="http://www.tesecai.cn/">特色菜网</a>
+			<a href="http://www.westfood.com.cn/">中国西餐网</a>
+			<a href="http://www.chinavegan.com/">中华素食网</a>
+			<a href="http://www.kclm.org/">中国快餐联盟网</a>
+			<a href="http://www.souchu.com/">搜厨网</a>
+			<a href="http://www.cantingsheji.com/">餐厅设计网</a>
+			<a href="https://www.meishichina.com/">美食中国</a>
+		</p>
+		<p class='linkweb'>
+			电话:&nbsp;15228946972&nbsp;售前QQ:&nbsp;562908512&nbsp;1263576715&nbsp;地址：&nbsp;深圳市宝安区龙华民治大道0000号 &nbsp;邮编：&nbsp;000000 &nbsp;（商务合作）
+		</p>
+		<p class='linkweb'>
+			网上快餐店 Copyright(C)2018-2019
+		</p>
+	</div>
+</body>
+</html>
